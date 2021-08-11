@@ -1,9 +1,30 @@
-import SocialLinks from "./SocialLinks";
+import styled from "styled-components";
 
-function SocialLink() {
-    return (
-        <h1>SL</h1>
-    )
+function SocialLink({image}) {
+  return (
+      <Link href="https://googe.com/" image={image}>
+        <span />
+      </Link>
+  )
 }
 
-export default SocialLink
+export default SocialLink;
+
+
+const Link = styled.a`
+  transition: background-color 350ms;
+
+  :hover > span {
+    background-color: #ccc;
+  }
+
+  > span {
+    display: block;
+    background-color: #999;
+    height: 21px;
+    width: 21px;
+    mask: ${(props) =>
+      props.image && "url(" + props.image + ") no-repeat 50% 50%"};
+    transition: background-color 350ms;
+  }
+`;

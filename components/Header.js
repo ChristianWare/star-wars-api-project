@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import styled from 'styled-components'
 import SocialLinks from './SocialLinks';
+import styled from 'styled-components'
 
 function Header() {
   return (
@@ -12,7 +12,7 @@ function Header() {
         <a>
           <img
             src='https://download.logo.wine/logo/Star_Wars/Star_Wars-Logo.wine.png'
-            alt=''
+            alt='Star Wars Logo'
           />
         </a>
       </Link>
@@ -21,15 +21,15 @@ function Header() {
           <input placeholder='Search Star Wars' />
           <img
             src='https://static-mh.content.disney.io/starwars/assets/navigation/icon_search-957a123fdb62.svg'
-            alt=''
+            alt='SW IMAGE'
           />
         </HeaderSearch>
-      </HeaderRight>
       <HeaderActions>
         <button>LOG IN</button>
         <span>//</span>
         <button>SIGN UP</button>
       </HeaderActions>
+      </HeaderRight>
     </HeaderContainer>
   );
 }
